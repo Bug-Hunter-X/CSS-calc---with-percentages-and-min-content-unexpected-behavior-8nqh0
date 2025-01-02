@@ -1,0 +1,10 @@
+The following CSS code snippet demonstrates an issue with unexpected behavior when using the `calc()` function with percentages and the `min-content` keyword:
+
+```css
+.container {
+  display: flex;
+  width: calc(50% + min-content);
+}
+```
+
+The intention is to have a container that takes up 50% of its available width, and then adds additional width if necessary to accommodate its content.  However, the `min-content` keyword doesn't always work as expected in combination with percentages.  The resulting width might be unexpectedly larger or smaller than intended, depending on the browser and the container's contents.
